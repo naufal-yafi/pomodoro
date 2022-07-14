@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro</title>
+    <link rel="shortcut icon" href="./assets/icons/3011a7fc88f46c634b4f1f5f1688eda5.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/design.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Accesoriess -->
+        <div class="belt"></div>
+        <div class="clock bot"></div>
+        <div class="clock top"></div>
+
+        <!-- Display Timer -->
+        <div class="clock screen display">
+            <div class="status_bar">
+                <p class="status">
+                    <img src="./assets/icons/clock.svg" alt="" width="20px">
+                    <span class="cond">work</span></p>
+                <img class="icon openSetting" src="./assets/icons/gear.svg" alt="" width="20px">
+            </div>
+            <hr class="top">
+            <div class="time">
+                <div class="timer_minute">00</div>
+                <div class="dot">:</div>
+                <div class="timer_second">00</div>
+                <div class="cicle">0</div>
+            </div>
+            <div class="digital-clock">
+                <div class="digital_minute">00</div>
+                <div class="digital_dot">:</div>
+                <div class="digital_second">00</div>
+            </div>
+            <hr class="bottom">
+            <div class="action">
+                <img class="icon play" src="./assets/icons/play-fill.svg" alt="" width="50px">
+                <img class="icon stop" src="./assets/icons/pause-fill.svg" alt="" width="50px">
+                <img class="icon repeat" src="./assets/icons/arrow-counterclockwise.svg" alt="" width="40px">
+            </div>
+        </div>
+
+        <!-- Custom Setting Timer -->
+        <div class="clock screen setting">
+            <hr>
+
+            <!-- Work Time -->
+            <div class="group">
+
+                <label for="" class="label__time">Work Time: </label>
+                <div id="custom">
+                    <div class="custom-work_time">
+                        <div class="up"><img src="./assets/icons/caret-up-fill.svg" alt="" width="15px"></div>
+                        <div class="down"><img src="./assets/icons/caret-down-fill.svg" alt="" width="15px"></div>
+                    </div>
+                    <div class="work_time">25</div>
+                    <label for="">minute</label>
+                </div>
+            </div>
+
+            <hr>
+
+            <!--  Break Time -->
+            <div class="group">
+                <img class="icon close" src="./assets/icons/x-circle-fill.svg" alt="" width="20px">
+                <label for="" class="label__time">Break Time: </label>
+                <div id="custom">
+                    <div class="custom-work_time">
+                        <div class="up"><img src="./assets/icons/caret-up-fill.svg" alt="" width="15px"></div>
+                        <div class="down"><img src="./assets/icons/caret-down-fill.svg" alt="" width="15px"></div>
+                    </div>
+                    <div class="break_time">5</div>
+                    <label for="">minute</label>
+                </div>
+            </div>
+
+            <hr>
+
+            <!--  Cicle Repeat -->
+            <div class="group">
+                <label for="" class="label__time">Cicle Repeat: </label>
+                <div id="custom">
+                    <div class="custom-work_time">
+                        <div class="up"><img src="./assets/icons/caret-up-fill.svg" alt="" width="15px"></div>
+                        <div class="down"><img src="./assets/icons/caret-down-fill.svg" alt="" width="15px"></div>
+                    </div>
+                    <div class="cicle_repeat">4</div>
+                    <label for="">cicle</label>
+                </div>
+            </div>
+
+            <hr>
+        </div>
+    </div>
+
+    <script src="./assets/app.js"></script>
+</body>
+</html>

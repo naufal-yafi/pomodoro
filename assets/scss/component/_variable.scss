@@ -1,0 +1,16 @@
+@font-face {
+    font-family: DSDIGI;
+    src: url('./../../fonts/DS-DIGI.TTF');
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url('./../../fonts/Poppins-Regular.ttf');
+}
+
+$main-color: black;
+$danger-color: red;
+$bg-color: white;
+
+$font-timer: DSDIGI;
+$font-base : Poppins;

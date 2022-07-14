@@ -1,0 +1,189 @@
+@font-face {
+  font-family: DSDIGI;
+  src: url("./../../fonts/DS-DIGI.TTF");
+}
+@font-face {
+  font-family: Poppins;
+  src: url("./../../fonts/Poppins-Regular.ttf");
+}
+* {
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5%;
+  width: 100%;
+  height: 100vh;
+  font-family: Poppins;
+  background: white;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 27rem;
+  overflow: hidden;
+  color: black;
+  user-select: none;
+}
+
+.belt {
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  background: black;
+  z-index: 2;
+}
+
+.clock {
+  position: absolute;
+  width: 30rem;
+  height: 30rem;
+  border-radius: 50%;
+  border: 30px solid black;
+  z-index: 999;
+  overflow: hidden;
+}
+.clock.bot {
+  box-shadow: 2px 0px 34px -4px rgba(0, 0, 0, 0.75) inset;
+  background: white;
+}
+.clock.top {
+  box-shadow: 1px 6px 32px -5px rgba(0, 0, 0, 0.75);
+}
+.clock.screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.clock.screen hr.top {
+  margin-top: 3rem;
+  margin-bottom: 0;
+}
+.clock.screen hr.bottom {
+  margin-bottom: 1rem;
+}
+.clock.screen .status_bar {
+  display: flex;
+}
+.clock.screen .status_bar .status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  margin-right: 1rem;
+  border-radius: 2rem;
+  font-size: 1rem;
+  color: white;
+  background: black;
+}
+.clock.screen .status_bar .status img {
+  filter: invert(100%);
+  margin-right: 0.5rem;
+}
+.clock.screen .time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+}
+.clock.screen .time .cicle {
+  position: absolute;
+  color: red;
+  right: 5rem;
+  top: 10rem;
+  font-size: 1.5rem;
+}
+.clock.screen .digital-clock {
+  position: absolute;
+  color: red;
+  left: 6.5rem;
+  top: 8rem;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clock.screen .action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clock.screen .action img {
+  margin-right: 2rem;
+}
+.clock.screen .action img.repeat {
+  margin-right: 0px;
+}
+
+.icon {
+  cursor: pointer;
+}
+.icon:active {
+  width: 40px;
+  opacity: 0.7;
+}
+.icon.repeat:active {
+  width: 30px;
+}
+.icon.openSetting:active {
+  width: 20px;
+  transform: rotate(30deg);
+}
+.icon.close {
+  position: absolute;
+  top: 2rem;
+}
+.icon.close:active {
+  width: 20px;
+  transform: rotate(30deg);
+}
+
+.up, .down {
+  cursor: pointer;
+}
+.up:active, .down:active {
+  opacity: 0.7;
+}
+
+.setting {
+  transition: 0.5s;
+  display: none;
+}
+.setting .group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.setting .group .label__time {
+  font-weight: 800;
+}
+.setting .group #custom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+hr {
+  width: 50%;
+  margin-bottom: 0.5rem;
+}
+
+.display {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.clock.screen.setting {
+  display: none;
+}/*# sourceMappingURL=design.css.map */

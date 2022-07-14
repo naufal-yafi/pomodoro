@@ -1,0 +1,34 @@
+.icon {
+    cursor: pointer;
+
+    &:active {
+        width: 40px;
+        opacity: .7;
+    }
+
+    &.repeat:active {
+        width: 30px;
+    }
+
+    &.openSetting:active {
+        width: 20px;
+        transform: rotate(30deg);
+    }
+
+    &.close {
+        position: absolute;
+        top: 2rem;
+
+        &:active {
+            width: 20px;
+            transform: rotate(30deg);
+        }
+    }
+}
+
+.up,.down {
+    cursor: pointer;
+    &:active {
+        opacity: .7;
+    }
+}

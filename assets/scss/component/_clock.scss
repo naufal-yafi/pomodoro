@@ -1,0 +1,86 @@
+.clock {
+    position: absolute;
+    width: 30rem;
+    height: 30rem;
+    border-radius: 50%;
+    border: 30px solid $main-color;
+    z-index: 999;
+    overflow: hidden;
+
+    &.bot {
+        box-shadow: 2px 0px 34px -4px rgba(0,0,0,0.75) inset;
+        background: $bg-color;
+    }
+
+    &.top {
+        box-shadow: 1px 6px 32px -5px rgba(0,0,0,0.75);
+    }
+
+    &.screen {
+        @include all-center;
+        flex-direction: column;
+
+        hr {
+            &.top {
+                margin-top: 3rem;
+                margin-bottom: 0;
+            }
+            &.bottom {
+                margin-bottom: 1rem;
+            }
+        }
+        
+        .status_bar {
+            display: flex;
+
+            .status {
+                @include all-center;
+                padding: .5rem 1rem;
+                margin-right: 1rem;
+                border-radius: 2rem;
+                font-size: 1rem;
+                color: $bg-color;
+                background: $main-color;
+
+                img {
+                    filter: invert(100%);
+                    margin-right: .5rem;
+                }
+            }
+        }
+        
+        .time {
+            @include all-center;
+            font-size: 5rem;
+
+            .cicle {
+                position: absolute;
+                color: $danger-color;
+                right: 5rem;
+                top: 10rem;
+                font-size: 1.5rem;
+            }
+        }
+        
+        .digital-clock {
+            position: absolute;
+            color: $danger-color;
+            left: 6.5rem;
+            top: 8rem;
+            font-size: 1rem;
+            @include all-center;
+        }
+
+        .action {
+            @include all-center;
+
+            img {
+                margin-right: 2rem;
+
+                &.repeat {
+                    margin-right: 0px;
+                }
+            }
+        }
+    }
+}
