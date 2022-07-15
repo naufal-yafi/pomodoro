@@ -13,6 +13,12 @@
         #custom {
             @include all-center;
             gap: 1rem;
+
+            .custom_time {
+                &.break {
+                    font-size: .7rem;
+                }
+            }
         }
     }
 

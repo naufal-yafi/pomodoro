@@ -1,3 +1,4 @@
+// Display Timer
 const countCicle = document.querySelector('.cicle'),
       contMinute = document.querySelector('.timer_minute'),
       contSecond = document.querySelector('.timer_second');
@@ -34,6 +35,65 @@ btnClose.addEventListener('click',() => {
 countCicle.innerHTML = customCicle.innerText;
 contMinute.innerHTML = customWorkTime.innerText;
 contSecond.innerHTML = 59;
+
+// Custom Time
+// Break
+    const calculateBreak = (work_time) => {
+        const root = [1*1,2*2,3*3,4*4,5*5,6*6,7*7,8*8];
+            for (let i=0; i<root.length; i++){
+                if (work_time < root[i]) {
+                    break_time = i;
+                    break; 
+                }
+            }
+        return break_time;
+    }
+// Work
+    const btnUp__work = document.querySelector('.up.work'),
+          btnDown__work = document.querySelector('.down.work');
+    const btnAction = (inp,cont,action,para,lim,cal) => {
+        let temp = parseInt(inp.innerText);
+
+        if (action == 'inc'){
+            temp += 1;
+            if (temp > para) {
+                temp = lim;
+            }
+        } else {
+            temp -= 1;
+            if (temp < para) {
+                temp = lim;
+            }
+        }
+
+        inp.innerHTML = temp;
+        cont.innerHTML = inp.innerText;
+        
+        if (cal != ''){
+            // Break
+            customBreakTime.innerHTML = calculateBreak(temp);
+        }
+    };
+
+    btnUp__work.addEventListener('click',()=>{
+        btnAction(customWorkTime,contMinute,'inc',59,10,'cal');
+    });
+
+    btnDown__work.addEventListener('click',()=>{
+        btnAction(customWorkTime,contMinute,'dec',10,59,'cal');
+    });
+
+// Cicle
+    const btnUp__cicle = document.querySelector('.up.cicle'),
+          btnDown__cicle = document.querySelector('.down.cicle');
+
+    btnUp__cicle.addEventListener('click',()=>{
+        btnAction(customCicle,countCicle,'inc',25,1,'');
+    });
+
+    btnDown__cicle.addEventListener('click',()=>{
+        btnAction(customCicle,countCicle,'dec',1,25,'');
+    });
 
 // Position Count Cicle
 if (countCicle.innerText.length > 4) {

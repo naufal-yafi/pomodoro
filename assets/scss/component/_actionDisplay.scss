@@ -1,8 +1,8 @@
 .display {
-    opacity: 1;
+    opacity: 0;
     transition: .5s;
 }
 
 .clock.screen.setting{
-    display: none;
+    display: flex;
 }
