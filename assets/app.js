@@ -4,6 +4,11 @@
               contMinute = document.querySelector('.timer_minute'),
               contSecond = document.querySelector('.timer_second');
 
+    // Display Digital Clock
+        const digitalHour = document.querySelector('.digital_hour'),
+              digitalMinute = document.querySelector('.digital_minute'),
+              digitalSecond = document.querySelector('.digital_second');
+
     // main display timer
         const mainDisplay = document.querySelector('.clock.screen.display'),
               btnOpenSetting = document.querySelector('.icon.openSetting');
@@ -22,6 +27,23 @@
               breakSound = 'time to take a break',
               stopSound = 'congratulations you have completed your task and have a good rest. See you';
 //! INITIALIZATION TO GET HTML ELEMENT
+
+//! DIGITAL CLOCK
+const digitalClock = setInterval(()=>{
+        let getDate = new Date(),
+            hour = getDate.getHours(),
+            minute = getDate.getMinutes(),
+            second = getDate.getSeconds();
+    
+            const addN = (time) => {
+                return time < 10 ? "0"+time : time;
+            }
+        
+        digitalHour.innerHTML = addN(hour);
+        digitalMinute.innerHTML = addN(minute);
+        digitalSecond.innerHTML = addN(second);
+    },1000);
+//! DIGITAL CLOCK
 
 //! UNHIDE and HIDE SETTINGS PANEL
     // Unhide Custom Timer and Hide Main Display   
@@ -129,7 +151,7 @@
 //! Position Count Cicle
     if (countCicle.innerText.length > 4) {
         countCicle.innerHTML = 4;
-        alert("Jangan Memasukkan Terlalu Banyak!!!");
+        alert("Too Much!!!");
     } else if (countCicle.innerText.length > 3){
         countCicle.style.right = "2rem";
     } else if (countCicle.innerText.length > 2){
