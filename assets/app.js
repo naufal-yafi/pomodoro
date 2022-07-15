@@ -16,6 +16,11 @@
         const customCicle = document.querySelector('.cicle_repeat'),
               customWorkTime = document.querySelector('.work_time'),
               customBreakTime = document.querySelector('.break_time');
+    
+    // sound
+        const workSound = 'time to work',
+              breakSound = 'time to take a break',
+              stopSound = 'congratulations you have completed your task and have a good rest. See you';
 //! INITIALIZATION TO GET HTML ELEMENT
 
 //! UNHIDE and HIDE SETTINGS PANEL

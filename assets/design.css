@@ -183,10 +183,10 @@ hr {
 }
 
 .display {
-  opacity: 0;
+  opacity: 1;
   transition: 0.5s;
 }
 
 .clock.screen.setting {
-  display: flex;
+  display: none;
 }/*# sourceMappingURL=design.css.map */
