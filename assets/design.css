@@ -176,6 +176,20 @@ body {
 .setting .group #custom .custom_time.break {
   font-size: 0.7rem;
 }
+.setting .group .reset {
+  border-radius: 15px;
+  font-size: 0.8rem;
+  padding: 0.5rem 1rem;
+  color: white;
+  background: black;
+  transition: 0.5s;
+}
+.setting .group .reset:hover {
+  cursor: pointer;
+  margin-top: 0.5rem;
+  font-weight: 800;
+  font-size: 1rem;
+}
 
 hr {
   width: 50%;

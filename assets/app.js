@@ -21,6 +21,12 @@
         const customCicle = document.querySelector('.cicle_repeat'),
               customWorkTime = document.querySelector('.work_time'),
               customBreakTime = document.querySelector('.break_time');
+
+    // button for timer
+        const btnPlay = document.querySelector('.icon.play'),
+              btnStop = document.querySelector('.icon.stop'),
+              btnRepeat = document.querySelector('.icon.repeat'),
+              btnResetDefault = document.querySelector('.reset');
     
     // sound
         const workSound = 'time to work',
@@ -66,7 +72,7 @@ const digitalClock = setInterval(()=>{
 //! DEFAULT TIMER
     countCicle.innerHTML = customCicle.innerText;
     contMinute.innerHTML = customWorkTime.innerText;
-    contSecond.innerHTML = 59;
+    contSecond.innerHTML = "00";
 //! DEFAULT TIMER
 
 //! EVENTLISTENER
@@ -145,6 +151,17 @@ const digitalClock = setInterval(()=>{
         
             btnDown__cicle.addEventListener('click',()=>{
                 btnAction(customCicle,countCicle,'dec',1,25,'');
+            });
+
+        //? Default Setting
+            btnResetDefault.addEventListener('click',()=>{
+                customWorkTime.innerHTML = 25;
+                contMinute.innerHTML = 25;
+
+                customBreakTime.innerHTML = calculateBreak(25);
+
+                customCicle.innerHTML = 4;
+                countCicle.innerHTML = 4;
             });
 //! EVENTLISTENER
 

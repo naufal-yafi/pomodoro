@@ -20,6 +20,22 @@
                 }
             }
         }
+
+        .reset {
+            border-radius: 15px;
+            font-size: .8rem;
+            padding: .5rem 1rem;
+            color: $bg-color;
+            background: $main-color;
+            transition: .5s;
+
+            &:hover {
+                cursor: pointer;
+                margin-top: .5rem;
+                font-weight: 800;
+                font-size: 1rem;
+            }
+        }
     }
 
 }
